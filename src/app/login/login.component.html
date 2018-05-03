@@ -1,0 +1,86 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="topnav">
+   
+    <a href="/about">About Us</a>
+    <a href="/login" style="background-color: #ddd ;color:black"> Login</a>
+    <a href="/register">Register</a>
+    <a href="/article">Featured Articles</a>
+    <a href="/login">Post an article</a>
+    
+   
+   
+  </div>
+  
+  <div style="padding-left:16px">
+      <h1 class="header">Welcome To Nature-Net</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <form [formGroup]="loginForm">
+              <div class="form-group">
+                <label><h4>Email address</h4></label>
+                <input type="email" formControlName="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label> <h4>Password</h4></label>
+                <input type="password" class="form-control" formControlName="password">
+                <label class="error">{{errorMessage}}</label>
+              </div>
+              <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Login</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <p>No account yet? <a href="/register">Create an account</a></p>
+            <p>To post an artcile user should login</p>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+  </body>
+  </html>
