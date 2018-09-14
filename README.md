@@ -3,7 +3,7 @@ Push Notification Angular5 Base Code
 The web Push Notification project  is an effort to create a project similar to the Nature Net site.
 The project basically focuses on creating a sign-up option, login , assigning special privileges to the logged in user like adding an article or editing his own article. 
 The users can subscribe or un-subscribe to get notifications when a desired user pushes an article.
-The project is implemented using Angular5 for front-end and firebase as back-up.
+The project is implemented using Angular5 for front-end and firebase for back-end.
 
 Installation 
 
